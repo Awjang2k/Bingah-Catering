@@ -1,0 +1,15 @@
+html {
+    scroll-behavior: smooth;
+   
+  }
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Mengatur posisi konten di bagian bawah */
+    height: 300px; /* Atur tinggi sesuai keinginan */
+  }
+
+
+
+
+

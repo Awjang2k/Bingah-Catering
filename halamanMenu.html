@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog</title>
+    <link rel="icon" type="image/png" href="bputihkecil-01.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="stylesmenu.css">
+<body>
+<!-- nav start -->
+<div id="atas2" class="bg-gray-50">
+    <header class="relative inset-x-0 top-0 z-50">
+        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="index.html" class="-m-1.5 p-1.5">
+              <img class="h-10 w-auto" src="assetpng/bingahlogomerah-02.png" alt="Company Logo" />
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <!-- Tambahkan ID pada tombol hamburger -->
+            <button type="button" id="hamburger-button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          <!-- NAV TENGAH -->
+          <div class="ml-10 hidden lg:flex lg:gap-x-12">
+            <a href="index.html#faq" class="text-sm font-semibold leading-6 text-gray-900">Kenapa Kami</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-red-900">Menu</a>
+            <a href="#galery" class="text-sm font-semibold leading-6 text-gray-900">Galery</a>
+            <a href="index.html#kerjasamaBrand" class="text-sm font-semibold leading-6 text-gray-900">Kerjasama Brand</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <!-- akan di isi icon sosmed -->
+            <a href="https://www.instagram.com/elmathbach" target="_blank">
+              <svg class="h-8 w-8 text-red-600" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <rect x="4" y="4" width="16" height="16" rx="4" />
+                <circle cx="12" cy="12" r="3" />
+                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+              </svg>
+            </a>
+          </div>
+        </nav>
+        <!-- Mobile menu -->
+        <div class="lg:hidden hidden" id="mobile-menu" role="dialog" aria-modal="true">
+          <!-- Konten menu -->
+          <div class="fixed inset-0 z-50 bg-gray-800 opacity-50"></div>
+          <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <img class="h-6 w-auto" src="assetpng/bingahlogomerah-02.png" alt="logobingah" />
+              </a>
+              <!-- Tombol "X" untuk menutup menu -->
+              <button type="button" id="close-menu-button" class="close-button -m-2.5 rounded-md p-2.5 text-gray-700" aria-label="Close menu">
+                <span class="sr-only">Close menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a href="index.html#faq" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-red-50">Kenapa Kami</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-red-900 hover:bg-red-50">Menu</a>
+                  <a href="#galery" id="galery-link" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-red-50">Galery</a>
+                  <a href="index.html#kerjasamaBrand" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-red-50">Kerjasama Brand</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+</div>
+<!-- nav end -->
+
+
+
+<!--Modal Popup start   -->
+
+<div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="fixed inset-0 bg-black opacity-50"></div>
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
+            </button>
+            <div class="p-4 md:p-5 text-center">
+                <svg class="mx-auto mb-4 w-12 h-12 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.933 13.909A4.357 4.357 0 0 1 3 12c0-1 4-6 9-6m7.6 3.8A5.068 5.068 0 0 1 21 12c0 1-3 6-9 6-.314 0-.62-.014-.918-.04M5 19 19 5m-4 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                  </svg>
+                  
+                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Halaman masih dalam tahap konstruksi</h3>
+                <button data-modal-hide="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
+                    Ya, Mengerti
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<!--Modal Popup end  -->
+
+<div class="bg-gray-50 h-32">
+</div>
+
+
+    <!-- header start -->
+     <div class="bg-gray-50 ">
+         <h1 class=" flex justify-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl ">Katalog</h1>
+     <p class=" flex justify-center text-lg font-normal text-gray-400 lg:text-xl sm:px-16 xl:px-48">berikut adalah katalog yang kami susun untuk berbagai kebutuhan anda</p>
+     </div>
+    <!-- header end -->
+
+    <!-- divider -->
+     <!-- <div class="bg-gray-50">
+         <span class="flex items-center">
+             <span class="h-px flex-1 bg-black"></span>
+             
+             <span class="h-px flex-1 bg-black"></span>
+           </span>
+     </div> -->
+
+<!-- tabel menu sehat start -->
+<div class="bg-gray-50 flex flex-col justify-center items-center min-h-screen">
+    <h1 class="flex justify-center mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-3xl underline underline-offset-4">Menu Sehat</h1>
+    <div class="relative overflow-x-auto rounded-lg shadow-2xl">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 bg-white rounded-lg shadow-md">
+            <thead class="text-xs text-gray-50 uppercase bg-gray-600">
+                <tr>
+                    <th scope="col" class="px-6 py-3">Nama Paket</th>
+                    <th scope="col" class="px-6 py-3">Isi Paket</th>
+                    <th scope="col" class="px-6 py-3">Stand</th>
+                    <th scope="col" class="px-6 py-3">Pax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Paket Diet Super
+                    </th>
+                    <td class="px-6 py-4">Ayam Serundeng <br> Sayur <br> Kentang <br> Nasi</td>
+                    <td class="px-6 py-4">4</td>
+                    <td class="px-6 py-4">Rp 10.000</td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Paket Ulang Tahun
+                    </th>
+                    <td class="px-6 py-4">Rendang <br> Jamur <br> Sosis <br> Nasi</td>
+                    <td class="px-6 py-4">2</td>
+                    <td class="px-6 py-4">Rp 15.000</td>
+                </tr>
+                <tr class="bg-white dark:bg-gray-800">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Paket Worth it
+                    </th>
+                    <td class="px-6 py-4">Ayam Bakar <br> Perkedel <br> Sayur <br> Nasi</td>
+                    <td class="px-6 py-4">2</td>
+                    <td class="px-6 py-4">Rp 12.500</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- tabel menu sehat end -->
+
+<!-- tabel menu event start -->
+<div class="bg-gray-50 flex flex-col justify-center items-center min-h-screen">
+    <h1 class="flex justify-center mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-3xl underline underline-offset-4">Menu Event</h1>
+    <div class="relative overflow-x-auto rounded-lg shadow-2xl">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 bg-white rounded-lg shadow-md">
+            <thead class="text-xs text-gray-50 uppercase bg-gray-600">
+                <tr>
+                    <th scope="col" class="px-6 py-3">Nama Paket</th>
+                    <th scope="col" class="px-6 py-3">Isi Paket</th>
+                    <th scope="col" class="px-6 py-3">Stand</th>
+                    <th scope="col" class="px-6 py-3">Pax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Paket Diet Super
+                    </th>
+                    <td class="px-6 py-4">Ayam Serundeng <br> Sayur <br> Kentang <br> Nasi</td>
+                    <td class="px-6 py-4">4</td>
+                    <td class="px-6 py-4">Rp 10.000</td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Paket Ulang Tahun
+                    </th>
+                    <td class="px-6 py-4">Rendang <br> Jamur <br> Sosis <br> Nasi</td>
+                    <td class="px-6 py-4">2</td>
+                    <td class="px-6 py-4">Rp 15.000</td>
+                </tr>
+                <tr class="bg-white dark:bg-gray-800">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        Paket Worth it
+                    </th>
+                    <td class="px-6 py-4">Ayam Bakar <br> Perkedel <br> Sayur <br> Nasi</td>
+                    <td class="px-6 py-4">2</td>
+                    <td class="px-6 py-4">Rp 12.500</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- tabel menu event end -->
+
+
+
+
+      <!-- galery start-->
+       <div id="galery" class="bg-gray-50">
+
+           <!-- kata galery -->
+           <h1 class="lg:text-center mb-4 text-3xl font-extrabold text-gray-600 md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-l to-red-600 via-red-500 from-orange-500">Bingah</span> Galery</h1>
+           <p class="-mt-2 lg:text-center text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">berikut adalah dokumentasi kami dari tahun ketahun</p>
+           
+           <!-- foto -->
+           <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+               <div class="grid gap-4">
+                   <div>
+                       <img class="h-auto max-w-full rounded-lg" src="contohGalery/cfoto1.jpg" alt="">
+                   </div>
+                   <div>
+                       <img class="h-auto max-w-full rounded-lg" src="contohGalery/cfoto2.jpg" alt="">
+                   </div>
+                   <div>
+                       <img class="h-auto max-w-full rounded-lg" src="contohGalery/cfoto3.jpg" alt="">
+                   </div>
+               </div>
+               <div class="grid gap-4">
+                   <div>
+                       <img class=" h-auto max-w-full rounded-lg " src="contohGalery/cfoto3.jpg" alt="">
+                   </div>
+                   <div>
+                       <img class="h-auto max-w-full rounded-lg" src="contohGalery/cfoto5.jpg" alt="">
+                   </div>
+                   <div>
+                       <img class="h-auto max-w-full rounded-lg" src="contohGalery/cfoto6.jpg" alt="">
+                   </div>
+               </div>
+               <div class="grid gap-4">
+                   <div>
+                       <img class="h-auto max-w-full rounded-lg" src="contohGalery/cfoto7.jpg" alt="">
+                   </div>
+                   <div>
+                       <img class="h-auto max-w-full rounded-lg" src="contohGalery/cfoto8.jpg" alt="">
+                   </div>
+                   <div>
+                       <img class="h-auto max-w-full rounded-lg" src="contohGalery/cfoto9.jpg" alt="">
+                   </div>
+               </div>
+               <div class="grid gap-4">
+                   <div>
+                       <img class="h-auto max-w-full rounded-lg" src="contohGalery/cfoto10.jpg" alt="">
+                   </div>
+                   <div>
+                       <img class="h-auto max-w-full rounded-lg" src="contohGalery/cfoto11.jpg" alt="">
+                   </div>
+                   <div>
+                       <img class="h-auto max-w-full rounded-lg" src="contohGalery/cfoto12.jpg" alt="">
+                   </div>
+               </div>
+           </div>
+       </div>
+      <!-- galery end-->
+
+       <!-- footer -->
+    <footer class="bg-gray-50">
+        <div
+          class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24"
+        >
+          <div class="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
+            <a
+              class="inline-block rounded-full bg-red-700 p-2 text-white shadow transition hover:bg-red-500 sm:p-3 lg:p-4"
+              href="#atas2"
+            >
+              <span class="sr-only">Back to top</span>
+  
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+  
+          <div class="lg:flex lg:items-end lg:justify-between">
+            <div>
+              <div class="flex justify-center text-teal-600 lg:justify-start">
+                <img
+                  src="bingah-01 copy.png"
+                  alt=""
+                  class="h-10"
+                  viewBox="0 0 118 24"
+                />
+              </div>
+  
+              <p
+                class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left"
+              >
+                Jl. Garut - Tasikmalaya No.36, RT.001/RW.002, Ngamplangsari, Kec.
+                Cilawu, Kabupaten Garut, Jawa Barat 44181
+              </p>
+            </div>
+  
+            <ul
+              class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-6 text-sm"
+            >
+              <li>
+                <a
+                  class="text-red-700 transition hover:text-sky-600/75"
+                  href="https://www.instagram.com/elmathbach/"
+                  target="_blank"
+                >
+                  Instagram
+                </a>
+              </li>
+  
+              <li>
+                <a class="text-red-700 transition hover:text-sky-600/75" href="#">
+                  Youtube
+                </a>
+              </li>
+  
+              <li>
+                <a
+                  class="text-red-700 transition hover:text-sky-600/75"
+                  href="https://www.tiktok.com/@elmathbach"
+                  target="_blank"
+                >
+                  Tiktok
+                </a>
+              </li>
+  
+              <li>
+                <a
+                  class="text-red-700 transition hover:text-sky-600/75"
+                  href="https://wa.me/6281212006984"
+                  target="_blank"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+  
+          <p class="mt-12 text-center text-sm text-gray-500 lg:text-right">
+            Bingah Copyright &copy; 2024. All rights reserved.
+          </p>
+        </div>
+      </footer>
+      <!-- footer END-->
+
+      <script src="popup.js"></script>
+      <script src="verMobile2.js"></script>
+</body>
+</html>

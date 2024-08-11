@@ -1,0 +1,54 @@
+html {
+    scroll-behavior: smooth;
+  }
+/* Atur elemen agar tersembunyi dan di luar layar secara default */
+.menu-transition {
+opacity: 0;
+transform: translateX(100%);
+transition: opacity 0.3s ease, transform 0.3s ease; /* Durasi dan jenis transisi */
+}
+
+/* Atur elemen agar terlihat dan di posisi semula saat terbuka */
+.menu-transition-open {
+opacity: 1;
+transform: translateX(0);
+}
+
+
+.wortel {
+    position: absolute; /* Mengatur gambar agar mengambang di dalam section */
+    top: 1680px; /* Jarak dari atas section */
+    right: 200px; /* Jarak dari kanan section */
+    width: 100px; /* Ukuran gambar */
+    height: auto; /* Menjaga rasio aspek gambar */
+    transition: transform 0.3s ease;
+}
+.wortel:hover {
+    transform: rotate(-15deg);
+}
+.brokoli {
+    position: absolute; /* Mengatur gambar agar mengambang di dalam section */
+    top: 1750px; /* Jarak dari atas section */
+    right: 900px; /* Jarak dari kanan section */
+    width: 150px; /* Ukuran gambar */
+    height: auto; /* Menjaga rasio aspek gambar */
+    transform: rotate(-35deg);
+    transition: transform 0.3s ease;
+}
+  .brokoli:hover {
+    transform: rotate(-15deg);
+  }
+
+  @media screen and (max-width: 1200px) {
+    .wortel {
+        display: none; /* Menghilangkan gambar pada perangkat dengan lebar layar 768px atau lebih kecil */
+    }
+    .brokoli {
+        display: none; /* Menghilangkan gambar pada perangkat dengan lebar layar 768px atau lebih kecil */
+    }
+}
+
+@media screen and (max-width: 915px) {
+    .fotoilang {
+        display: none; /* Menghilangkan gambar pada perangkat dengan lebar layar 768px atau lebih kecil */
+    }}
